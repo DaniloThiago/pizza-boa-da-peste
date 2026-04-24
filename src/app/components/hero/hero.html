@@ -4,10 +4,30 @@
     <img class="hero__bird" src="assets/svg/hero/passaro.svg" alt="" aria-hidden="true" />
     <img class="hero__caju" src="assets/svg/hero/caju.svg" alt="" aria-hidden="true" />
 
-    <img class="hero__corner hero__corner--tl" src="assets/svg/hero/canto-borda.svg" alt="" aria-hidden="true" />
-    <img class="hero__corner hero__corner--tr" src="assets/svg/hero/canto-borda.svg" alt="" aria-hidden="true" />
-    <img class="hero__corner hero__corner--bl" src="assets/svg/hero/canto-borda.svg" alt="" aria-hidden="true" />
-    <img class="hero__corner hero__corner--br" src="assets/svg/hero/canto-borda.svg" alt="" aria-hidden="true" />
+    <img
+      class="hero__corner hero__corner--tl"
+      src="assets/svg/hero/canto-borda.svg"
+      alt=""
+      aria-hidden="true"
+    />
+    <img
+      class="hero__corner hero__corner--tr"
+      src="assets/svg/hero/canto-borda.svg"
+      alt=""
+      aria-hidden="true"
+    />
+    <img
+      class="hero__corner hero__corner--bl"
+      src="assets/svg/hero/canto-borda.svg"
+      alt=""
+      aria-hidden="true"
+    />
+    <img
+      class="hero__corner hero__corner--br"
+      src="assets/svg/hero/canto-borda.svg"
+      alt=""
+      aria-hidden="true"
+    />
 
     <div class="hero__paper" aria-hidden="true"></div>
     <div class="hero__grain" aria-hidden="true"></div>
@@ -20,8 +40,18 @@
       <nav class="hero__nav" aria-label="Menu principal">
         <ul class="hero__links" [class.hero__links--open]="menuOpen()">
           <li class="hero__links-brand">
-            <a class="hero__menuBrand" href="#topo" aria-label="Pizza Boa da Peste" (click)="closeMenu()">
-              <img class="hero__menuLogo" src="assets/svg/hero/logo.svg" alt="" aria-hidden="true" />
+            <a
+              class="hero__menuBrand"
+              href="#topo"
+              aria-label="Pizza Boa da Peste"
+              (click)="closeMenu()"
+            >
+              <img
+                class="hero__menuLogo"
+                src="assets/svg/hero/logo.svg"
+                alt=""
+                aria-hidden="true"
+              />
             </a>
           </li>
           @for (link of navLinks; track link.href) {
@@ -50,7 +80,7 @@
     <div class="hero__content">
       <div class="hero__copy">
         <div class="hero__titleBlock js-reveal">
-    <img class="hero__sun" src="assets/svg/hero/sol.svg" alt="" aria-hidden="true" />
+          <img class="hero__sun" src="assets/svg/hero/sol.svg" alt="" aria-hidden="true" />
 
           <h1 class="hero__title">
             <span>Pizza boa</span>
@@ -76,7 +106,11 @@
       </div>
 
       <div class="hero__art js-reveal" aria-label="Composição ilustrada do hero">
-        <img class="hero__pizza" src="assets/svg/hero/pizza.svg" alt="Pizza ilustrada em xilogravura" />
+        <img
+          class="hero__pizza"
+          src="assets/svg/hero/pizza.svg"
+          alt="Pizza ilustrada em xilogravura"
+        />
       </div>
     </div>
   </div>

@@ -99,7 +99,7 @@
   position: relative;
   z-index: 2;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
   gap: 1rem;
   padding: 0.4rem clamp(2rem, 4vw, 4rem) 0.8rem;
@@ -156,9 +156,10 @@
 .hero__links a {
   display: inline-flex;
   align-items: center;
+  font-family: "Cordelina", "Bungee", sans-serif;
   padding: 0.65rem 0.95rem;
   border-radius: 999px;
-  font-size: 0.82rem;
+  font-size: 1.5rem;
   font-weight: 800;
   letter-spacing: 0.06em;
   text-transform: uppercase;
@@ -257,12 +258,14 @@
 .hero__title {
   display: grid;
   gap: 0;
-  font-size: clamp(4rem, 10vw, 8.8rem);
+  font-family: "Xilosa", "Cordelina", "Bungee", sans-serif;
+  font-size: clamp(3.7rem, 9vw, 8.2rem);
   line-height: 0.82;
   text-transform: uppercase;
   letter-spacing: 0.03em;
   color: var(--ink);
   text-shadow: 2px 2px 0 rgba(255, 248, 236, 0.55);
+  text-wrap-mode: nowrap;
 }
 
 .hero__sun {
@@ -327,9 +330,9 @@
 
 .hero__bird {
   top: 20%;
-  right: 3%;
+  right: 23%;
   left: auto;
-  width: clamp(120px, 16vw, 190px);
+  width: clamp(85px, 9vw, 175px);
   z-index: 1;
   --bird-flip: 1;
   transform: translate3d(0, 0, 0) scaleX(var(--bird-flip)) rotate(4deg) scale(0.98);
@@ -419,8 +422,11 @@
   }
 
   .hero__bird {
-    right: 3%;
-    width: 21vw;
+    right: 26%;
+  }
+
+  .hero__links {
+    justify-content: center;
   }
 
   .hero__caju {
@@ -459,7 +465,7 @@
   }
 
   .hero__title {
-    font-size: clamp(3.5rem, 17vw, 5.7rem);
+    font-size: clamp(3.25rem, 16vw, 5.2rem);
   }
 
   .hero__actions {
@@ -482,8 +488,8 @@
 
   .hero__bird {
     top: 24%;
-    right: auto;
     left: 3%;
+    right: auto;
     width: 21vw;
     --bird-flip: -1;
   }
@@ -543,8 +549,9 @@
   .hero__links a {
     width: 100%;
     justify-content: center;
+    font-family: "Cordelina", "Bungee", sans-serif;
     padding: 1rem 1.1rem;
-    font-size: 1rem;
+    font-size: 2rem;
   }
 
   .hero__links-cta {

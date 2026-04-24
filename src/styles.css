@@ -28,6 +28,18 @@
   color-scheme: light;
 }
 
+@font-face {
+  font-family: "Cordelina";
+  src: url("/assets/fonts/cordelina/cordelina.otf") format("opentype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Xilosa";
+  src: url("/assets/fonts/xilosa_.ttf") format("truetype");
+  font-display: swap;
+}
+
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
