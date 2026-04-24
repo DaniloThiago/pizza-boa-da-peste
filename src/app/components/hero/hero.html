@@ -19,11 +19,10 @@
 
       <nav class="hero__nav" aria-label="Menu principal">
         <ul class="hero__links" [class.hero__links--open]="menuOpen()">
-          <li class="hero__links-close">
-            <button type="button" class="hero__menuClose" (click)="closeMenu()" aria-label="Fechar menu">
-              <span></span>
-              <span></span>
-            </button>
+          <li class="hero__links-brand">
+            <a class="hero__menuBrand" href="#topo" aria-label="Pizza Boa da Peste" (click)="closeMenu()">
+              <img class="hero__menuLogo" src="assets/svg/hero/logo.svg" alt="" aria-hidden="true" />
+            </a>
           </li>
           @for (link of navLinks; track link.href) {
             <li>

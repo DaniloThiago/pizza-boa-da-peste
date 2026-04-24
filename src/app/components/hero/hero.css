@@ -137,8 +137,20 @@
   flex-wrap: wrap;
 }
 
-.hero__links-close {
+.hero__links-brand {
   display: none;
+}
+
+.hero__menuBrand {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero__menuLogo {
+  width: clamp(104px, 22vw, 150px);
+  height: auto;
+  filter: brightness(0.05);
 }
 
 .hero__links a {
@@ -208,36 +220,6 @@
 
 .hero__burger--open span:nth-child(3) {
   transform: translateY(-7px) rotate(-45deg);
-}
-
-.hero__menuClose {
-  position: relative;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 44px;
-  height: 44px;
-  padding: 0;
-  border: 1px solid rgba(15, 13, 10, 0.12);
-  border-radius: 999px;
-  background: rgba(15, 13, 10, 0.06);
-  cursor: pointer;
-}
-
-.hero__menuClose span {
-  position: absolute;
-  width: 18px;
-  height: 2px;
-  border-radius: 2px;
-  background: var(--ink);
-}
-
-.hero__menuClose span:first-child {
-  transform: rotate(45deg);
-}
-
-.hero__menuClose span:last-child {
-  transform: rotate(-45deg);
 }
 
 .hero__content {
@@ -513,45 +495,49 @@
   .hero__burger {
     display: inline-flex;
     position: relative;
-    z-index: 2;
+    z-index: 2147483647;
+  }
+
+  .hero__burger--open {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
   }
 
   .hero__links {
     display: none;
     position: fixed;
     inset: 0;
+    width: 100vw;
+    max-width: 100vw;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 0.35rem;
-    padding: 6rem 1.2rem 2rem;
+    padding: 1rem 1.2rem 2rem;
     border: 0;
     border-radius: 0;
     background: rgba(248, 240, 220, 0.98);
     box-shadow: none;
     z-index: 2147483647;
-    overflow: auto;
+    overflow-y: auto;
+    overflow-x: hidden;
+    overscroll-behavior: contain;
   }
 
   .hero__links--open {
     display: flex;
+    flex-wrap: nowrap;
   }
 
   .hero__links li {
     width: 100%;
   }
 
-  .hero__links-close {
+  .hero__links-brand {
     display: flex;
-    justify-content: flex-end;
-    margin-bottom: 0.75rem;
-  }
-
-  .hero__links-close .hero__menuClose {
-    position: fixed;
-    top: 1rem;
-    right: 1rem;
-    z-index: 2147483647;
+    justify-content: center;
+    margin-bottom: 1rem;
   }
 
   .hero__links a {
