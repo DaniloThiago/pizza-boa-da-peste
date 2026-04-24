@@ -1,0 +1,164 @@
+:host {
+  display: block;
+}
+
+.cardapio {
+  padding: 20px 0 30px;
+  background: linear-gradient(180deg, rgba(238, 225, 197, 0.96), rgba(245, 234, 208, 0.96));
+}
+
+.cardapio__inner {
+  width: min(1200px, calc(100% - 2rem));
+  margin: 0 auto;
+}
+
+.cardapio__header {
+  max-width: 52rem;
+  margin: 0 auto 2rem;
+  text-align: center;
+}
+
+.cardapio__header h2 {
+  margin-top: 0.4rem;
+  font-size: clamp(3rem, 7vw, 5.2rem);
+  text-transform: uppercase;
+}
+
+.cardapio__header h2 span {
+  display: block;
+  font-size: 0.56em;
+  color: var(--muted);
+}
+
+.cardapio__header p {
+  margin: 0.9rem auto 0;
+  max-width: 42rem;
+  color: var(--text-2);
+  line-height: 1.8;
+}
+
+.cardapio__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.pizza-card {
+  position: relative;
+  padding: 18px;
+  border: 4px solid var(--ink);
+  background:
+    linear-gradient(180deg, rgba(248, 240, 220, 0.96), rgba(233, 216, 179, 0.96));
+  box-shadow: 10px 10px 0 rgba(15, 13, 10, 0.14);
+  min-height: 280px;
+}
+
+.pizza-card__ribbon {
+  position: absolute;
+  top: 14px;
+  right: -10px;
+  padding: 8px 12px;
+  border: 2px solid var(--ink);
+  background: var(--ink);
+  color: #f8f0dc;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  transform: rotate(4deg);
+}
+
+.pizza-card__stamp {
+  width: 92px;
+  height: 92px;
+  margin-bottom: 1rem;
+  border: 4px solid var(--ink);
+  border-radius: 50%;
+  background:
+    radial-gradient(circle, #f0d39c 0 36%, #d5ae67 37% 58%, #ab7334 59% 100%);
+}
+
+.pizza-card__stamp::before {
+  content: "";
+  display: block;
+  width: 74px;
+  height: 74px;
+  margin: 9px;
+  border: 2px dashed rgba(15, 13, 10, 0.36);
+  border-radius: 50%;
+}
+
+.pizza-card__body {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.pizza-card__body h3 {
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+
+.pizza-card__body p {
+  color: var(--text-2);
+  line-height: 1.7;
+}
+
+.pizza-card__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 1.2rem;
+}
+
+.pizza-card__price {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+
+.pizza-card__btn {
+  min-height: 46px;
+  padding-inline: 20px;
+}
+
+.cardapio__cta {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 18px 20px;
+  border: 3px solid var(--ink);
+  background: rgba(248, 240, 220, 0.92);
+  box-shadow: 8px 8px 0 rgba(15, 13, 10, 0.12);
+}
+
+.cardapio__cta p {
+  color: var(--text-2);
+}
+
+@media (max-width: 980px) {
+  .cardapio__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .cardapio__cta {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 640px) {
+  .cardapio {
+    padding-top: 10px;
+  }
+
+  .cardapio__inner {
+    width: min(100% - 1rem, 1200px);
+  }
+
+  .cardapio__grid {
+    grid-template-columns: 1fr;
+  }
+}

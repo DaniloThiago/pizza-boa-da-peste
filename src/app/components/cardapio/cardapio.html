@@ -1,0 +1,37 @@
+<section class="cardapio" id="cardapio" #cardapioSection>
+  <div class="cardapio__inner">
+    <div class="cardapio__header js-card">
+      <span class="eyebrow">Sabores da casa</span>
+      <h2>
+        Nossos sabores
+        <span>em folhas de cordel</span>
+      </h2>
+      <p>
+        Cada pizza nasce com traço manual, tempero marcado e uma leitura clara de cardapio:
+        sabor, preço e vontade de pedir de novo.
+      </p>
+    </div>
+
+    <div class="cardapio__grid">
+      @for (pizza of pizzas; track pizza.name) {
+        <article class="pizza-card js-card" [class]="'pizza-card--' + pizza.tag">
+          <div class="pizza-card__ribbon">{{ pizza.badge }}</div>
+          <div class="pizza-card__stamp" aria-hidden="true"></div>
+          <div class="pizza-card__body">
+            <h3>{{ pizza.name }}</h3>
+            <p>{{ pizza.description }}</p>
+          </div>
+          <div class="pizza-card__footer">
+            <span class="pizza-card__price">{{ pizza.price }}</span>
+            <a href="#contato" class="btn btn-secondary pizza-card__btn">Pedir</a>
+          </div>
+        </article>
+      }
+    </div>
+
+    <div class="cardapio__cta js-card">
+      <p>Quer pedir mais de um sabor? A gente monta do jeito que a fome mandar.</p>
+      <a href="#contato" class="btn btn-primary">Chamar no WhatsApp</a>
+    </div>
+  </div>
+</section>

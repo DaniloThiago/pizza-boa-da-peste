@@ -1,0 +1,21 @@
+<section class="destaques" id="destaques" #destaquesSection>
+  <div class="destaques__inner">
+    <div class="destaques__header">
+      <span class="eyebrow">Por que a boa da peste?</span>
+      <h2>
+        Quatro golpes de
+        <span>identidade e sabor</span>
+      </h2>
+    </div>
+
+    <div class="destaques__grid">
+      @for (item of destaques; track item.title) {
+        <article class="destaque-item">
+          <div class="destaque-item__icon" aria-hidden="true">{{ item.icon }}</div>
+          <h3>{{ item.title }}</h3>
+          <p>{{ item.text }}</p>
+        </article>
+      }
+    </div>
+  </div>
+</section>

@@ -1,0 +1,31 @@
+<section class="depoimentos" id="depoimentos" #depoimentosSection>
+  <div class="depoimentos__inner">
+    <div class="depoimentos__header">
+      <span class="eyebrow">O que o povo diz</span>
+      <h2>
+        Quem prova,
+        <span>volta pra contar</span>
+      </h2>
+    </div>
+
+    <div class="depoimentos__grid">
+      @for (d of depoimentos; track d.name) {
+        <article class="depoimento-card">
+          <div class="depoimento-card__stars" aria-label="{{ d.stars }} estrelas">
+            @for (s of starsArray(d.stars); track $index) {
+              <span aria-hidden="true">*</span>
+            }
+          </div>
+          <blockquote class="depoimento-card__text">{{ d.text }}</blockquote>
+          <footer class="depoimento-card__author">
+            <div class="depoimento-card__avatar" aria-hidden="true">{{ d.initial }}</div>
+            <div>
+              <strong>{{ d.name }}</strong>
+              <span>{{ d.role }}</span>
+            </div>
+          </footer>
+        </article>
+      }
+    </div>
+  </div>
+</section>

@@ -1,0 +1,84 @@
+<section class="hero" id="topo" #heroSection>
+  <div class="hero__frame">
+    <img class="hero__land" src="assets/svg/hero/caatinga.svg" alt="" aria-hidden="true" />
+    <img class="hero__bird" src="assets/svg/hero/passaro.svg" alt="" aria-hidden="true" />
+    <img class="hero__caju" src="assets/svg/hero/caju.svg" alt="" aria-hidden="true" />
+
+    <img class="hero__corner hero__corner--tl" src="assets/svg/hero/canto-borda.svg" alt="" aria-hidden="true" />
+    <img class="hero__corner hero__corner--tr" src="assets/svg/hero/canto-borda.svg" alt="" aria-hidden="true" />
+    <img class="hero__corner hero__corner--bl" src="assets/svg/hero/canto-borda.svg" alt="" aria-hidden="true" />
+    <img class="hero__corner hero__corner--br" src="assets/svg/hero/canto-borda.svg" alt="" aria-hidden="true" />
+
+    <div class="hero__paper" aria-hidden="true"></div>
+    <div class="hero__grain" aria-hidden="true"></div>
+
+    <div class="hero__topline">
+      <a class="hero__brand js-reveal" href="#topo" aria-label="Pizza Boa da Peste">
+        <img class="hero__seal" src="assets/svg/hero/logo.svg" alt="" aria-hidden="true" />
+      </a>
+
+      <nav class="hero__nav" aria-label="Menu principal">
+        <ul class="hero__links" [class.hero__links--open]="menuOpen()">
+          <li class="hero__links-close">
+            <button type="button" class="hero__menuClose" (click)="closeMenu()" aria-label="Fechar menu">
+              <span></span>
+              <span></span>
+            </button>
+          </li>
+          @for (link of navLinks; track link.href) {
+            <li>
+              <a [href]="link.href" (click)="closeMenu()">{{ link.label }}</a>
+            </li>
+          }
+          <li class="hero__links-cta">
+            <a href="#contato" class="btn btn-primary" (click)="closeMenu()">Pedir agora</a>
+          </li>
+        </ul>
+
+        <button
+          class="hero__burger js-reveal"
+          [class.hero__burger--open]="menuOpen()"
+          (click)="toggleMenu()"
+          aria-label="Abrir menu"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </nav>
+    </div>
+
+    <div class="hero__content">
+      <div class="hero__copy">
+        <div class="hero__titleBlock js-reveal">
+    <img class="hero__sun" src="assets/svg/hero/sol.svg" alt="" aria-hidden="true" />
+
+          <h1 class="hero__title">
+            <span>Pizza boa</span>
+            <span>da peste</span>
+          </h1>
+        </div>
+
+        <p class="hero__lead js-reveal">
+          Massa artesanal, forno quente e tempero do Nordeste em uma cena inteira desenhada com os
+          SVGs da casa.
+        </p>
+
+        <div class="hero__actions js-reveal">
+          <a href="#contato" class="btn btn-whatsapp">Pedir agora no WhatsApp</a>
+          <a href="#cardapio" class="btn btn-secondary">Ver sabores</a>
+        </div>
+
+        <div class="hero__chips js-reveal" aria-label="Destaques do preparo">
+          <span>Massa artesanal</span>
+          <span>Sabor arretado</span>
+          <span>Feita na hora</span>
+        </div>
+      </div>
+
+      <div class="hero__art js-reveal" aria-label="Composição ilustrada do hero">
+        <img class="hero__pizza" src="assets/svg/hero/pizza.svg" alt="Pizza ilustrada em xilogravura" />
+      </div>
+    </div>
+  </div>
+</section>
