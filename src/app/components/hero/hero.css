@@ -485,11 +485,11 @@
   .hero__sun {
     top: -60%;
     left: 60%;
-    width: min(82vw, 350px);
+    width: min(82vw, 250px);
   }
 
   .hero__bird {
-    top: 18%;
+    top: 23%;
     left: 3%;
     right: auto;
     width: 16vw;
