@@ -30,13 +30,13 @@
 
 @font-face {
   font-family: "Cordelina";
-  src: url("/assets/fonts/cordelina/cordelina.otf") format("opentype");
+  src: url("assets/fonts/cordelina/cordelina.otf") format("opentype");
   font-display: swap;
 }
 
 @font-face {
   font-family: "Xilosa";
-  src: url("/assets/fonts/xilosa_.ttf") format("truetype");
+  src: url("assets/fonts/xilosa_.ttf") format("truetype");
   font-display: swap;
 }
 
